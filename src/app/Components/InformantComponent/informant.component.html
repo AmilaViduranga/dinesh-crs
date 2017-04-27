@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">Officer Informant</h3>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label>Informant Officer</label>
+      <select class="form-control" name="officerId" [(ngModel)]="selectedOfficer" name="selectedOfficer" (ngModelChange)="loadInfo($event)">
+        <option disabled selected value> -- select officeer -- </option>
+        <option *ngFor="let officer of officers">{{officer.officerId}}</option>
+      </select>
+    </div>
+    <div class="form-group" *ngIf="selectedOfficerInfo">
+      <label>Officer name</label>
+      <span class="label label-primary">{{selectedOfficerInfo.name}}</span>
+    </div>
+    <div class="form-group" *ngIf="selectedOfficerInfo">
+      <label>Designation</label>
+      <span class="label label-success">{{selectedOfficerInfo.designation}}</span>
+    </div>
+  </div>
+</div>

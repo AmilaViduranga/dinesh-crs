@@ -1,0 +1,28 @@
+<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title pull-left">CR Informations</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Detection date</label>
+          <input type="date" class="form-control"  placeholder="Detected date" [(ngModel)]="detectionDate" name="detectionDate">
+        </div>
+        <app-item></app-item>
+      </div>
+      <div class="col-sm-6">
+        <app-officer></app-officer>
+        <app-informant></app-informant>
+      </div>
+    </div>
+    <div class="row">
+      <app-accused></app-accused>
+    </div>
+    <div class="panel-footer">
+      <a class="btn btn-primary pull-right" href="#" (click)="addCrs();">
+        Save
+      </a>
+    </div>
+  </div>
+</div>
